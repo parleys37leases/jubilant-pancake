@@ -1,0 +1,13 @@
+<p id="countdown"></p>
+
+<script>
+function updateCountdown() {
+  const now = new Date();
+  const nextYear = new Date(`Jan 1, ${now.getFullYear() + 1} 00:00:00`);
+  const diff = nextYear - now;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  document.getElementById("countdown").textContent = `🎉 ${days} days until New Year`;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
